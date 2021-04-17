@@ -2,24 +2,27 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style media="screen">
-    .title{
-      font-size : 40px;
-    }
-@media (max-width: 600px)    {
-  .title{
-    font-size: 200px;
-  }
-}
-  </style>
+    <input type="button" value="DAY" onclick="
+      document.querySelector('head').style.backgroundColor = 'white';
+      document.querySelector('head').style.color= 'slategray';
+    ">
+    <input type="button" value="NIGHT" onclick="
+    document.querySelector('head').style.backgroundColor = 'black';
+    document.querySelector('head').style.color= 'white';
+    ">
 
-    <title></title>
+    <title> </title>
   </head>
   <body>
-<div class="title">
-  ph-1
+    <h1>DAY AND NIGHT</h1>
 
-</div>
-  </body>
+<input type="button" value="DAY" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color= 'slategray';
+">
+<input type="button" value="NIGHT" onclick="
+document.querySelector('body').style.backgroundColor = 'slategray';
+document.querySelector('body').style.color= 'white';
+">
+</body>
 </html>
