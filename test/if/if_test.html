@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <h1>if_test</h1>
+  <body>
+    <!-- document.querySelector('#night_day') : id = "night_day" 을 찾아서 .value 를 갖고온다-->
+    <!-- 이때, vlaue === 'night'이면 아래 코드 진행 -->
+
+<input id="night_day" type="button" value="night" onclick ="
+if (document.querySelector('#night_day').value === 'night') {
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  document.querySelector('#night_day').value = 'day';
+} else {
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  document.querySelector('#night_day').value = 'night';
+}
+">
+<p>test</p>
+<input type="button" value="night" onclick ="
+if (this.value === 'night') {
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  this.value = 'day';
+} else {
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  this.value = 'night';
+}
+">
+  </body>
+</html>
