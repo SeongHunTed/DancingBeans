@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+<script>
+  function nightDayHandler() {
+    var value = document.getElementById('night_day').value;
+    if (value === 'night') {
+      document.querySelector('body').style.color = "white";
+      document.querySelector('body').style.backgroundColor = "black";
+      document.getElementById('night_day').value = "day";
+    }
+    else {
+      document.querySelector('body').style.color = "black";
+      document.querySelector('body').style.backgroundColor = "white";
+      document.getElementById('night_day').value = "night";
+    }
+  }
+</script>
+  </head>
+<body>
+    <input type="button" id="night_day" value="night" onclick ="
+      nightDayHandler();
+    ">
+
+    <h2><a href="https://cafe.naver.com/etoos247ilsandonggu">iPod</a></h2>
+  </body>
+</html>
