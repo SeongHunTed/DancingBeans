@@ -3,27 +3,16 @@
   <head>
     <meta charset="utf-8">
 
-<script>
-  function nightDayHandler() {
-    var value = document.getElementById('night_day').value;
-    if (value === 'night') {
-      document.querySelector('body').style.color = "white";
-      document.querySelector('body').style.backgroundColor = "black";
-      document.getElementById('night_day').value = "day";
-    }
-    else {
-      document.querySelector('body').style.color = "black";
-      document.querySelector('body').style.backgroundColor = "white";
-      document.getElementById('night_day').value = "night";
-    }
-  }
-</script>
+    <script src="color.js">
+
+    </script>
   </head>
 <body>
     <input type="button" id="night_day" value="night" onclick ="
-      nightDayHandler();
+      nightDayHandler(this);
     ">
-
-    <h2><a href="https://cafe.naver.com/etoos247ilsandonggu">iPod</a></h2>
+    <h1><a href="https://www.youtube.com/watch?v=te5SP_CKQ3k">NU DISCO!</a></h2>
+    <h2><a href="https://cafe.naver.com/etoos247ilsandonggu">CHILL HOUSE!</a></h2>
+    <h3><a href="https://cafe.naver.com/etoos247ilsandonggu">JAZZZ HOUSE!</a></h2>
   </body>
 </html>
