@@ -11,7 +11,7 @@
         <!--View Controller Start-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewControllerStart" customModule="Dancing_Ted" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerStart" customModule="DancingBeans" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,15 @@
                                     <segue destination="6gh-WW-MVP" kind="presentation" identifier="goToOrder" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="mZ3-RL-Tvm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHB-Yd-Rl7">
+                                <rect key="frame" x="111" y="538" width="152" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btnG_아이콘원형" title=""/>
+                                <connections>
+                                    <segue destination="Czi-uq-asp" kind="show" id="YXX-co-mH5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -48,7 +57,7 @@
         <!--View Controller Order-->
         <scene sceneID="ri0-EK-Nsy">
             <objects>
-                <viewController id="6gh-WW-MVP" customClass="ViewControllerOrder" customModule="Dancing_Ted" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6gh-WW-MVP" customClass="ViewControllerOrder" customModule="DancingBeans" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sct-yk-cZf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +205,7 @@
         <!--View Controller Americano-->
         <scene sceneID="Ltv-Z2-iVQ">
             <objects>
-                <viewController id="rqH-vm-6TS" customClass="ViewControllerAmericano" customModule="Dancing_Ted" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rqH-vm-6TS" customClass="ViewControllerAmericano" customModule="DancingBeans" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xFE-TM-QOX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,9 +286,37 @@
             </objects>
             <point key="canvasLocation" x="1436" y="97.536945812807886"/>
         </scene>
+        <!--View Controller Naver Login-->
+        <scene sceneID="Jtx-rg-JG2">
+            <objects>
+                <viewController id="Czi-uq-asp" customClass="ViewControllerNaverLogin" customModule="DancingBeans" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpv-Wq-HWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6b-EA-4RT">
+                                <rect key="frame" x="137" y="295" width="101" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Naver Login"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3aa-2Q-kJC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="62t-Nk-hrV"/>
+                    <connections>
+                        <outlet property="LaverLogin" destination="O6b-EA-4RT" id="Z4f-MG-rTw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pl0-LD-eJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="751"/>
+        </scene>
     </scenes>
     <resources>
         <image name="americano" width="1080" height="1080"/>
+        <image name="btnG_아이콘원형" width="128" height="128"/>
         <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
         <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
