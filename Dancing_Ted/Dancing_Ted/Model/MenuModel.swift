@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct MenuModel{
+    let menuList = [
+     Menu(nameMenu: "Americano", count: 0, shot: 2, ice_hot: true) //true : ICE / false : Hot
+    ]
+}

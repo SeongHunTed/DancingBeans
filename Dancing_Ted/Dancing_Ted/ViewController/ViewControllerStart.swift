@@ -9,20 +9,15 @@ import UIKit
 
 class ViewControllerStart: UIViewController {
     
-    @IBOutlet var playOrderButton: UIButton!
-    @IBOutlet var playLatteButton: UIButton!
+    @IBAction func pushOrderButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToOrder", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func touchUpPlayOrderAmeicanoButton(_ sender: UIButton){
-        print("Americano button tapped")
-    }
-    
-    @IBAction func touchUpPlayOrderLatteButton(_ sender: UIButton){
-        print("Latte button tapped")
-    }
 
 
 }
