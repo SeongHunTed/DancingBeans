@@ -3,20 +3,21 @@ import UIKit
 import NaverThirdPartyLogin
 import Alamofire
 
-class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDelegate {
+class ViewControllerNaverLogin: UIViewController, NaverThirdPartyLoginConnectionDelegate {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var id: UILabel!
-    @IBOutlet var Login: UILabel!
-    @IBOutlet weak var LaverLogin: UIButton!
+
+    @IBOutlet var NaverLoginButton: UIButton!
     
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
     override func viewDidLoad() {
         loginInstance?.delegate = self
+               
     }
-    
+
     // 로그인에 성공한 경우 호출
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
         print("Success login")
@@ -46,7 +47,7 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
     @IBAction func logout(_ sender: Any) {
         loginInstance?.requestDeleteToken()
     }
-    
+       
     // RESTful API, id가져오기
     func getInfo() {
       guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
