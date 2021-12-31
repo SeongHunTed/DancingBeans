@@ -2,7 +2,7 @@
 
 [DancingBeans] Dev1.0 
 
-## Enviroments
+## Environment
 - Api       : [naver]
 - Language  : [Swift]
 - Tool      : [xcode]
