@@ -3,6 +3,6 @@
 [DancingBeans] Dev1.0 
 
 ## Enviroments
-- API       : [naver]
-- Launage   : [Swift]
-- tool      : [xcode]
+- Api       : [naver]
+- Language  : [Swift]
+- Tool      : [xcode]
