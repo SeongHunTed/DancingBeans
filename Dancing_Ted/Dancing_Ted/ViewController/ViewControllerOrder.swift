@@ -13,12 +13,6 @@ class ViewControllerOrder: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func pushAmericano(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "pushDetailOrder", sender: self)
-        
-    }
     
-
 }
 

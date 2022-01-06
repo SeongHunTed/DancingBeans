@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewControllerOrderLast: UIViewController {
+class ViewControllerStart: UIViewController {
     
     @IBAction func pushOrderButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "goToOrder", sender: self)
