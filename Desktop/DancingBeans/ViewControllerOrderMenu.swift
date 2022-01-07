@@ -12,12 +12,10 @@ class ViewControllerOrderMenu: UIViewController {
  
     @IBOutlet weak var menuButton: UIButton!
     
-    var menuImageArray = [UIImage(named: "error"),UIImage(named: "IceAmericano"), UIImage(named: "IceLatte")]
-    var menuNameArray = ["error", "IceAmericano", "IceLatte"]
+//    var menuImageArray = [UIImage(named: "error"),UIImage(named: "IceAmericano"), UIImage(named: "IceLatte")]
+    var menuNameArray = ["Sorry :(", "Americano", "Latte"]
     
     var menuButtonName: String?
-    
-    
     
     
     override func viewDidLoad() {
@@ -37,27 +35,28 @@ class ViewControllerOrderMenu: UIViewController {
             return
         }
         
+        
+        if button.tag == 1 {
             
-        
-        
-        if menuButton?.currentTitle == "Americano" {
-            print("yes")
             nextViewController.menuName = menuNameArray[1]
-            nextViewController.menuImage = menuImageArray[1]
+            nextViewController.menuImage = UIImage(named: menuNameArray[1])
             //        nextViewController.menuImageView = UIImageView(image: UIImage(named: "americano"))
             //        nextViewController.menuImageView.image = imageAmericano
-
-        } else {
-            print(button.currentTitle)
-            print(menuButton?.currentTitle, "doesnt work")
             
-            if menuButton?.currentTitle == nil {
-                nextViewController.menuName = menuNameArray[0]
-                nextViewController.menuImage = menuImageArray[0]
-            }
+        } else if button.tag == 2 {
+                
+            nextViewController.menuName = menuNameArray[2]
+            nextViewController.menuImage = UIImage(named: menuNameArray[2])
+
+        } else { //  Occurred Error
+            
+            print("Sorry :()")
+            nextViewController.menuName = menuNameArray[0]
+            nextViewController.menuImage = UIImage(named: menuNameArray[0])
         }
         
         
+
     }
     
     

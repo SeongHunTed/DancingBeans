@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		30534F992785A98900EE5B61 /* ViewControllerOrderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534F982785A98900EE5B61 /* ViewControllerOrderMenu.swift */; };
 		30534FA12785E49300EE5B61 /* ViewControllerSecondMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534FA02785E49200EE5B61 /* ViewControllerSecondMenu.swift */; };
-		30534FA32786B37400EE5B61 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534FA22786B37400EE5B61 /* ViewControllerTest.swift */; };
 		30534FA52786FC1500EE5B61 /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534FA42786FC1500EE5B61 /* CornerButton.swift */; };
-		308A0D8D2780BA5E0076D418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A0D8C2780BA5E0076D418 /* ViewController.swift */; };
 		30C89E49277C9CFF007A3D0B /* ViewControllerNaverLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C89E48277C9CFF007A3D0B /* ViewControllerNaverLogin.swift */; };
 		78998DB4277B5E7400D022B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DB3277B5E7400D022B1 /* AppDelegate.swift */; };
 		78998DB6277B5E7400D022B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DB5277B5E7400D022B1 /* SceneDelegate.swift */; };
@@ -19,10 +17,8 @@
 		78998DBB277B5E7400D022B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78998DB9277B5E7400D022B1 /* Main.storyboard */; };
 		78998DBD277B5E7900D022B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78998DBC277B5E7900D022B1 /* Assets.xcassets */; };
 		78998DC0277B5E7900D022B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78998DBE277B5E7900D022B1 /* LaunchScreen.storyboard */; };
-		78998DCA277C2B0A00D022B1 /* ViewControllerOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DC9277C2B0A00D022B1 /* ViewControllerOrder.swift */; };
 		78998DCD277C3FB600D022B1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DCC277C3FB600D022B1 /* Menu.swift */; };
 		78998DCF277C407500D022B1 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DCE277C407500D022B1 /* MenuModel.swift */; };
-		78998DD2277C449C00D022B1 /* ViewControllerAmericano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DD1277C449C00D022B1 /* ViewControllerAmericano.swift */; };
 		CD12EB22EFF6A19D798B1954 /* Pods_DancingBeans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5724DFB6F9FC08A2A815DD8 /* Pods_DancingBeans.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,9 +26,7 @@
 		01EA4DF1E22EE8727EC8433C /* Pods-DancingBeans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingBeans.debug.xcconfig"; path = "Target Support Files/Pods-DancingBeans/Pods-DancingBeans.debug.xcconfig"; sourceTree = "<group>"; };
 		30534F982785A98900EE5B61 /* ViewControllerOrderMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerOrderMenu.swift; sourceTree = SOURCE_ROOT; };
 		30534FA02785E49200EE5B61 /* ViewControllerSecondMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSecondMenu.swift; sourceTree = "<group>"; };
-		30534FA22786B37400EE5B61 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		30534FA42786FC1500EE5B61 /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
-		308A0D8C2780BA5E0076D418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30C89E48277C9CFF007A3D0B /* ViewControllerNaverLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNaverLogin.swift; sourceTree = "<group>"; };
 		38FF4395008AAE6FC610568C /* Pods-DancingBeans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingBeans.release.xcconfig"; path = "Target Support Files/Pods-DancingBeans/Pods-DancingBeans.release.xcconfig"; sourceTree = "<group>"; };
 		78998DB0277B5E7400D022B1 /* DancingBeans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingBeans.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +37,8 @@
 		78998DBC277B5E7900D022B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78998DBF277B5E7900D022B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78998DC1277B5E7900D022B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78998DC9277C2B0A00D022B1 /* ViewControllerOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerOrder.swift; sourceTree = "<group>"; };
 		78998DCC277C3FB600D022B1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		78998DCE277C407500D022B1 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
-		78998DD1277C449C00D022B1 /* ViewControllerAmericano.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAmericano.swift; sourceTree = "<group>"; };
 		B5724DFB6F9FC08A2A815DD8 /* Pods_DancingBeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DancingBeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,7 +81,6 @@
 				30534FA42786FC1500EE5B61 /* CornerButton.swift */,
 				78998DCB277C2B2200D022B1 /* ViewController */,
 				78998DB9277B5E7400D022B1 /* Main.storyboard */,
-				30534FA22786B37400EE5B61 /* ViewControllerTest.swift */,
 				78998DBC277B5E7900D022B1 /* Assets.xcassets */,
 				78998DBE277B5E7900D022B1 /* LaunchScreen.storyboard */,
 				78998DC1277B5E7900D022B1 /* Info.plist */,
@@ -100,9 +91,6 @@
 		78998DCB277C2B2200D022B1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				308A0D8C2780BA5E0076D418 /* ViewController.swift */,
-				78998DD1277C449C00D022B1 /* ViewControllerAmericano.swift */,
-				78998DC9277C2B0A00D022B1 /* ViewControllerOrder.swift */,
 				78998DB7277B5E7400D022B1 /* ViewControllerStart.swift */,
 				30C89E48277C9CFF007A3D0B /* ViewControllerNaverLogin.swift */,
 				30534F982785A98900EE5B61 /* ViewControllerOrderMenu.swift */,
@@ -254,15 +242,11 @@
 			files = (
 				78998DB8277B5E7400D022B1 /* ViewControllerStart.swift in Sources */,
 				30534FA12785E49300EE5B61 /* ViewControllerSecondMenu.swift in Sources */,
-				30534FA32786B37400EE5B61 /* ViewControllerTest.swift in Sources */,
-				78998DD2277C449C00D022B1 /* ViewControllerAmericano.swift in Sources */,
 				78998DB4277B5E7400D022B1 /* AppDelegate.swift in Sources */,
-				308A0D8D2780BA5E0076D418 /* ViewController.swift in Sources */,
 				78998DCF277C407500D022B1 /* MenuModel.swift in Sources */,
 				78998DB6277B5E7400D022B1 /* SceneDelegate.swift in Sources */,
 				30534F992785A98900EE5B61 /* ViewControllerOrderMenu.swift in Sources */,
 				30C89E49277C9CFF007A3D0B /* ViewControllerNaverLogin.swift in Sources */,
-				78998DCA277C2B0A00D022B1 /* ViewControllerOrder.swift in Sources */,
 				30534FA52786FC1500EE5B61 /* CornerButton.swift in Sources */,
 				78998DCD277C3FB600D022B1 /* Menu.swift in Sources */,
 			);
