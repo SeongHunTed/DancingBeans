@@ -210,7 +210,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BpI-G8-CEC"/>
                     <connections>
-                        <outlet property="whatthefuck" destination="9Wc-rb-aR5" id="A6G-YC-lvs"/>
+                        <outlet property="whatthefuck" destination="pjH-Hc-Sm4" id="3gQ-2m-DhF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DG8-dN-3Ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -232,12 +232,83 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-41-MaF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-41-MaF">
                                 <rect key="frame" x="16" y="95" width="343" height="231"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hhh-41-MaF" secondAttribute="height" multiplier="49:33" id="pj4-b6-l0q"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22S-hG-SDP">
+                                <rect key="frame" x="16" y="344" width="343" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.24703386429999999" green="0.2470747828" blue="0.24702486400000001" alpha="0.74551169288079466" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-L7-nv4">
+                                <rect key="frame" x="20" y="349" width="193" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BeckmanFree" family="Beckman" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ICE / HOT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOf-VT-dHx">
+                                <rect key="frame" x="20" y="391" width="193" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BeckmanFree" family="Beckman" pointSize="14"/>
+                                <color key="textColor" red="0.50932851463857332" green="0.50932851463857332" blue="0.50932851463857332" alpha="0.61000959443172964" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84k-kw-SQq">
+                                <rect key="frame" x="20" y="456" width="193" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BeckmanFree" family="Beckman" pointSize="14"/>
+                                <color key="textColor" red="0.50932851459999995" green="0.50932851459999995" blue="0.50932851459999995" alpha="0.61000959440000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-pA-ibU">
+                                <rect key="frame" x="220" y="387" width="47" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ICE">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iceHotTouchButtons:" destination="hrU-75-77g" eventType="touchUpInside" id="ITJ-b8-jgG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyo-NE-2Vt">
+                                <rect key="frame" x="292" y="387" width="53" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="HOT">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="iceHotTouchButtons:" destination="hrU-75-77g" eventType="touchUpInside" id="Z7i-jD-Vb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5a9-HB-gns">
+                                <rect key="frame" x="209" y="452" width="70" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1SHOT">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shotTouchButtons:" destination="hrU-75-77g" eventType="touchUpInside" id="wr9-0R-7VS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54H-6r-69v">
+                                <rect key="frame" x="284" y="452" width="70" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="2SHOT">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shotTouchButtons:" destination="hrU-75-77g" eventType="touchUpInside" id="s3a-gR-jTf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y67-3z-7OP"/>
                         <color key="backgroundColor" red="0.99207526450000005" green="0.97260278460000005" blue="0.94106537099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -245,6 +316,10 @@
                     <connections>
                         <outlet property="menuImageTag" destination="hhh-41-MaF" id="6GS-Js-SQ0"/>
                         <outlet property="menuNameTag" destination="Kif-uV-xts" id="gNz-ca-p1o"/>
+                        <outletCollection property="iceHotButtons" destination="k7t-pA-ibU" collectionClass="NSMutableArray" id="PgE-7C-49e"/>
+                        <outletCollection property="iceHotButtons" destination="wyo-NE-2Vt" collectionClass="NSMutableArray" id="jsY-WD-qV9"/>
+                        <outletCollection property="shotButtons" destination="5a9-HB-gns" collectionClass="NSMutableArray" id="ydC-07-Rxz"/>
+                        <outletCollection property="shotButtons" destination="54H-6r-69v" collectionClass="NSMutableArray" id="jdp-Ox-BHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="156-Ws-3ZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,7 +328,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Puj-Yu-w9c"/>
+        <segue reference="jXW-QS-Nic"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="main" width="1080" height="2340"/>

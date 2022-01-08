@@ -15,7 +15,7 @@ class OrderViewController: UIViewController{
     
     
     var menuImageArray =
-    [ UIImage(named: "ameicano"),
+    [ UIImage(named: "americano"),
       UIImage(named: "Vanilla"),
       UIImage(named: "Dancing"),
       UIImage(named: "Filter"),
@@ -53,24 +53,27 @@ class OrderViewController: UIViewController{
 //            print("fuck")
 //        }
         
-        switch (whatthefuck.titleLabel?.text)! {
+        switch (button.titleLabel?.text)! {
         case "Americano":
             nextViewController.menuName = menuArray[0]
             nextViewController.menuImage = menuImageArray[0]
-        case "Latte","Vanilla latte":
+        case "Latte":
             nextViewController.menuName = menuArray[1]
             nextViewController.menuImage = menuImageArray[1]
-        case "Dancing Latte":
+        case "Vanilla latte":
             nextViewController.menuName = menuArray[2]
+            nextViewController.menuImage = menuImageArray[1]
+        case "Dancing Latte":
+            nextViewController.menuName = menuArray[3]
             nextViewController.menuImage = menuImageArray[2]
         case "Filter":
-            nextViewController.menuName = menuArray[3]
+            nextViewController.menuName = menuArray[4]
             nextViewController.menuImage = menuImageArray[3]
         case "Flat White":
-            nextViewController.menuName = menuArray[4]
+            nextViewController.menuName = menuArray[5]
             nextViewController.menuImage = menuImageArray[4]
         case "Espresso":
-            nextViewController.menuName = menuArray[5]
+            nextViewController.menuName = menuArray[6]
             nextViewController.menuImage = menuImageArray[5]
         default:
             print("error")

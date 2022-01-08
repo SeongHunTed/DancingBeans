@@ -26,5 +26,47 @@ class OptionViewController: UIViewController{
         menuImageTag.image = menuImage
     }
     
-    //viewwillappear 함수
+    @IBOutlet var iceHotButtons: [UIButton]!
+    var indexOfOneAndOnly: Int?
+    
+    @IBOutlet var shotButtons: [UIButton]!
+    var indexOfOneAndOnly2: Int?
+    
+    @IBAction func iceHotTouchButtons(_ sender: UIButton){
+        if indexOfOneAndOnly != nil {
+            if !sender.isSelected{
+                for index in iceHotButtons.indices{
+                    iceHotButtons[index].isSelected = false
+                }
+                sender.isSelected = true
+                indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
+                
+            } else {
+                sender.isSelected = false
+                indexOfOneAndOnly = nil
+            }
+        } else {
+            sender.isSelected = true
+            indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
+        }
+    }
+    
+    @IBAction func shotTouchButtons(_ sender: UIButton) {
+        if indexOfOneAndOnly2 != nil{
+            if !sender.isSelected {
+                for index in shotButtons.indices{
+                    shotButtons[index].isSelected = false
+                }
+                sender.isSelected = true
+                indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
+            } else {
+                sender.isSelected = false
+                indexOfOneAndOnly2 = nil
+            }
+        } else {
+            sender.isSelected = true
+            indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
+        }
+    }
 }
+
