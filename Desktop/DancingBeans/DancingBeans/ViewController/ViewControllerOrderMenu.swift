@@ -43,18 +43,25 @@ class ViewControllerOrderMenu: UIViewController {
             
         case "Americano" :
             
+            let menuName = UIFont(name: "Beckman", size: UIFont.labelFontSize)
+            
+            
             nextViewController.menuName = "Americano"
             nextViewController.menuImage = UIImage(named: "Americano")
+            nextViewController.menuPrice = 3500
+            
             
         case "Latte" :
             
             nextViewController.menuName = "Latte"
             nextViewController.menuImage = UIImage(named: "Latte")
+            nextViewController.menuPrice = 4000
             
         default :
             
             nextViewController.menuName = "Sorry :("
             nextViewController.menuImage = UIImage(named: "Sorry :(")
+            nextViewController.menuPrice = 5500
         }
     }
 }
