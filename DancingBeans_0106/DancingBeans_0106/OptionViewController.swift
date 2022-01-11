@@ -68,5 +68,11 @@ class OptionViewController: UIViewController{
             indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
         }
     }
+    
+    @IBAction func optionPageDone(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
