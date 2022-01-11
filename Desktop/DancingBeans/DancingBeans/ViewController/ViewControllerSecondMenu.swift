@@ -9,6 +9,8 @@ import UIKit
 
 class ViewControllerSecondMenu: UIViewController {
 
+    // IBOutlet
+    
     @IBOutlet weak var menuNameTag: UILabel!
     @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var menuValueLabel: UILabel!
