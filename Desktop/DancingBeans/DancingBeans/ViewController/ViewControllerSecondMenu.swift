@@ -11,14 +11,35 @@ class ViewControllerSecondMenu: UIViewController {
 
     @IBOutlet weak var menuNameTag: UILabel!
     @IBOutlet weak var menuImageView: UIImageView!
+    @IBOutlet weak var menuValueLabel: UILabel!
+    @IBOutlet weak var menuCountStepper: UIStepper!
+    @IBOutlet weak var menuOrderPrice: UILabel!
     
+    
+    @IBAction func menuStepperValueChanged(_ sender: UIStepper) {
+        
+        menuValueLabel.text = Int(sender.value).description
+        
+        menuOrderPrice.text = Int(sender.value*4500).description
+        
+    }
+    
+    @IBAction func backToMain() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var menuName: String?
     var menuImage: UIImage?
     
     
+    // Common View(Menu Image, Menu Label)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuCountStepper.wraps = true
+        menuCountStepper.autorepeat = true
+        menuCountStepper.maximumValue = 30
         
             }
     
@@ -30,15 +51,50 @@ class ViewControllerSecondMenu: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet var iceHotButtons: [UIButton]!
+    var indexOfOneAndOnly: Int?
+    
+    @IBOutlet var shotButtons: [UIButton]!
+    var indexOfOneAndOnly2: Int?
+    
+    
+    // Option View(temperature, place, syrup, shot ...etc)
+    
+    @IBAction func iceHotTouchButtons(_ sender: UIButton){
+        if indexOfOneAndOnly != nil {
+            if !sender.isSelected{
+                for index in iceHotButtons.indices{
+                    iceHotButtons[index].isSelected = false
+                }
+                sender.isSelected = true
+                indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
+                
+            } else {
+                sender.isSelected = false
+                indexOfOneAndOnly = nil
+            }
+        } else {
+            sender.isSelected = true
+            indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
+        }
     }
-    */
-
+    
+    @IBAction func shotTouchButtons(_ sender: UIButton) {
+        if indexOfOneAndOnly2 != nil{
+            if !sender.isSelected {
+                for index in shotButtons.indices{
+                    shotButtons[index].isSelected = false
+                }
+                sender.isSelected = true
+                indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
+            } else {
+                sender.isSelected = false
+                indexOfOneAndOnly2 = nil
+            }
+        } else {
+            sender.isSelected = true
+            indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
+        }
+    }
+    
 }

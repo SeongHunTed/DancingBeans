@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30534F992785A98900EE5B61 /* ViewControllerOrderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534F982785A98900EE5B61 /* ViewControllerOrderMenu.swift */; };
 		30534FA12785E49300EE5B61 /* ViewControllerSecondMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534FA02785E49200EE5B61 /* ViewControllerSecondMenu.swift */; };
 		30534FA52786FC1500EE5B61 /* CornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534FA42786FC1500EE5B61 /* CornerButton.swift */; };
+		30534FA727887B8800EE5B61 /* ViewControllerOrderMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534FA627887B8800EE5B61 /* ViewControllerOrderMenu.swift */; };
 		30C89E49277C9CFF007A3D0B /* ViewControllerNaverLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C89E48277C9CFF007A3D0B /* ViewControllerNaverLogin.swift */; };
 		78998DB4277B5E7400D022B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DB3277B5E7400D022B1 /* AppDelegate.swift */; };
 		78998DB6277B5E7400D022B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78998DB5277B5E7400D022B1 /* SceneDelegate.swift */; };
@@ -24,9 +24,9 @@
 
 /* Begin PBXFileReference section */
 		01EA4DF1E22EE8727EC8433C /* Pods-DancingBeans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingBeans.debug.xcconfig"; path = "Target Support Files/Pods-DancingBeans/Pods-DancingBeans.debug.xcconfig"; sourceTree = "<group>"; };
-		30534F982785A98900EE5B61 /* ViewControllerOrderMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerOrderMenu.swift; sourceTree = SOURCE_ROOT; };
 		30534FA02785E49200EE5B61 /* ViewControllerSecondMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSecondMenu.swift; sourceTree = "<group>"; };
 		30534FA42786FC1500EE5B61 /* CornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerButton.swift; sourceTree = "<group>"; };
+		30534FA627887B8800EE5B61 /* ViewControllerOrderMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerOrderMenu.swift; sourceTree = "<group>"; };
 		30C89E48277C9CFF007A3D0B /* ViewControllerNaverLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNaverLogin.swift; sourceTree = "<group>"; };
 		38FF4395008AAE6FC610568C /* Pods-DancingBeans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DancingBeans.release.xcconfig"; path = "Target Support Files/Pods-DancingBeans/Pods-DancingBeans.release.xcconfig"; sourceTree = "<group>"; };
 		78998DB0277B5E7400D022B1 /* DancingBeans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DancingBeans.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +93,8 @@
 			children = (
 				78998DB7277B5E7400D022B1 /* ViewControllerStart.swift */,
 				30C89E48277C9CFF007A3D0B /* ViewControllerNaverLogin.swift */,
-				30534F982785A98900EE5B61 /* ViewControllerOrderMenu.swift */,
 				30534FA02785E49200EE5B61 /* ViewControllerSecondMenu.swift */,
+				30534FA627887B8800EE5B61 /* ViewControllerOrderMenu.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 				78998DB4277B5E7400D022B1 /* AppDelegate.swift in Sources */,
 				78998DCF277C407500D022B1 /* MenuModel.swift in Sources */,
 				78998DB6277B5E7400D022B1 /* SceneDelegate.swift in Sources */,
-				30534F992785A98900EE5B61 /* ViewControllerOrderMenu.swift in Sources */,
+				30534FA727887B8800EE5B61 /* ViewControllerOrderMenu.swift in Sources */,
 				30C89E49277C9CFF007A3D0B /* ViewControllerNaverLogin.swift in Sources */,
 				30534FA52786FC1500EE5B61 /* CornerButton.swift in Sources */,
 				78998DCD277C3FB600D022B1 /* Menu.swift in Sources */,

@@ -13,13 +13,15 @@ class ViewControllerOrderMenu: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     
 //    var menuImageArray = [UIImage(named: "error"),UIImage(named: "IceAmericano"), UIImage(named: "IceLatte")]
-    var menuNameArray = ["Sorry :(", "Americano", "Latte"]
+//    var menuNameArray = ["Sorry :(", "Americano", "Latte"]
     
     var menuButtonName: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
         
 
@@ -33,31 +35,26 @@ class ViewControllerOrderMenu: UIViewController {
         
         guard let button: UIButton = sender as? UIButton else {
             return
+            
         }
         
-        
-        if button.tag == 1 {
-            
-            nextViewController.menuName = menuNameArray[1]
-            nextViewController.menuImage = UIImage(named: menuNameArray[1])
-            //        nextViewController.menuImageView = UIImageView(image: UIImage(named: "americano"))
-            //        nextViewController.menuImageView.image = imageAmericano
-            
-        } else if button.tag == 2 {
-                
-            nextViewController.menuName = menuNameArray[2]
-            nextViewController.menuImage = UIImage(named: menuNameArray[2])
 
-        } else { //  Occurred Error
+        switch (button.titleLabel?.text!) {
             
-            print("Sorry :()")
-            nextViewController.menuName = menuNameArray[0]
-            nextViewController.menuImage = UIImage(named: menuNameArray[0])
+        case "Americano" :
+            
+            nextViewController.menuName = "Americano"
+            nextViewController.menuImage = UIImage(named: "Americano")
+            
+        case "Latte" :
+            
+            nextViewController.menuName = "Latte"
+            nextViewController.menuImage = UIImage(named: "Latte")
+            
+        default :
+            
+            nextViewController.menuName = "Sorry :("
+            nextViewController.menuImage = UIImage(named: "Sorry :(")
         }
-        
-        
-
     }
-    
-    
 }
