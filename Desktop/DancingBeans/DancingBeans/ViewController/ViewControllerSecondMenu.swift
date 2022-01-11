@@ -18,9 +18,20 @@ class ViewControllerSecondMenu: UIViewController {
     
     @IBAction func menuStepperValueChanged(_ sender: UIStepper) {
         
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        var price = numberFormatter.string(from: NSNumber(value: sender.value * 4500))
+        
+        
         menuValueLabel.text = Int(sender.value).description
         
-        menuOrderPrice.text = Int(sender.value*4500).description
+//        menuOrderPrice.text = Int(sender.value*4500).description + " 원"
+        menuOrderPrice.text = price! + " 원"
+        
+        
+        
+        
         
     }
     
