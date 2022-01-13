@@ -1,124 +1,145 @@
-//
-//  ViewControllerSecondMenu.swift
-//  DancingBeans
-//
-//  Created by JAEHYEON on 2022/01/05.
-//
 
 import UIKit
+//import MaterialComponents.MaterialBottomSheet // --- Bottom Sheet Library
+
 
 class ViewControllerSecondMenu: UIViewController {
 
-    // IBOutlet
-    
-    @IBOutlet weak var menuNameTag: UILabel!
-    @IBOutlet weak var menuImageView: UIImageView!
-    @IBOutlet weak var menuValueLabel: UILabel!
-    @IBOutlet weak var menuCountStepper: UIStepper!
-    @IBOutlet weak var menuOrderPrice: UILabel!
-    @IBOutlet var iceHotButtons: [UIButton]!
-    @IBOutlet var shotButtons: [UIButton]!
 
-    
-    // IBAction
-    
-    //
-    @IBAction func menuStepperValueChanged(_ sender: UIStepper) {
-        
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        
-        let price = numberFormatter.string(from: NSNumber(value: sender.value * menuPrice))
-        
-        menuValueLabel.text = Int(sender.value).description
-        menuOrderPrice.text = price! + " 원"
-        
-    }
-    
-    // 담기 버튼 action
-    @IBAction func backToMain() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-
-    @IBAction func iceHotTouchButtons(_ sender: UIButton){
-        if indexOfOneAndOnly != nil {
-            if !sender.isSelected{
-                for index in iceHotButtons.indices{
-                    iceHotButtons[index].isSelected = false
-                }
-                sender.isSelected = true
-                indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
-                
-            } else {
-                sender.isSelected = false
-                indexOfOneAndOnly = nil
-            }
-        } else {
-            sender.isSelected = true
-            indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
-        }
-    }
-
-    @IBAction func shotTouchButtons(_ sender: UIButton) {
-        if indexOfOneAndOnly2 != nil{
-            if !sender.isSelected {
-                for index in shotButtons.indices{
-                    shotButtons[index].isSelected = false
-                }
-                sender.isSelected = true
-                indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
-            } else {
-                sender.isSelected = false
-                indexOfOneAndOnly2 = nil
-            }
-        } else {
-            sender.isSelected = true
-            indexOfOneAndOnly2 = shotButtons.firstIndex(of: sender)
-        }
-    }
-    
-    
     // var
 
     var menuName: String?   // --- 이전 VC에서 정의할 메뉴 이름
     var menuImage: UIImage? // --- 이전 VC에서 정의할 메뉴 사진
-    var menuPrice: Double = 0.0  // --- 이전 VC에서 정의할 메뉴 가격
+    var menuPrice: Int = 0  // --- 이전 VC에서 정의할 메뉴 가격
+    var menuOptionTemp: UILabel?
     
     
-    var indexOfOneAndOnly: Int?
-    var indexOfOneAndOnly2: Int?
+    // IBOutlet
+    
+    @IBOutlet weak var menuNameLabel: UILabel!
+    @IBOutlet weak var menuImageView: UIImageView!
+    @IBOutlet weak var menuCountNumberLabel: UILabel!
+    @IBOutlet weak var menuCountStepper: UIStepper!
+    @IBOutlet weak var menuOrderPrice: UILabel!
+    @IBOutlet weak var menuOptionHot: UIButton!
+    @IBOutlet weak var menuOptionIce: UIButton!
+    
+    @IBAction func menuAddOption(_ sender: Any) {
+//
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewControllerOrderOption") as! ViewControllerOrderOption
+//
+//        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
+//
+//        present(bottomSheet, animated: true, completion: nil)
+        
+        
+//        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "ViewController") else {
+//            return
+//        }
+//
+//        nextVC.view.backgroundColor = [.systemPurple, .green, .blue].randomElement()!
+//
+//        if let sheet = nextVC.presentationController as? UISheetPresentationController {
+//            sheet.detents = [.medium(), .large()]
+//        }
+//
+//        present(nextVC, animated: true)
+        
+        
+        let navigationController = UINavigationController(rootViewController: ViewControllerOrderOption())
+        print("dose work" )
+        present(navigationController, animated: true, completion: nil)
+    }
     
     
+    // 메뉴 개수 및 가격 count func
+    @IBAction func menuCountNumberStepper(_ sender: UIStepper) {
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        let price = numberFormatter.string(from: NSNumber(value: Int(sender.value) * menuPrice))
+        print(price)
+        
+        menuCountNumberLabel.text = Int(sender.value).description
+        menuOrderPrice.text = " \(price!) 원"
+        
+
+    }
+
     
+    // 담기 버튼 action
+    @IBAction func backToMain() {
+//        self.dismiss(animated: true, completion: nil) // --- modal.dismiss
+        print("담기 클릭")
+        self.navigationController?.popViewController(animated: true) // --- navigation pop
+        
+    }
+    
+    @IBAction func switchHotMenu(_ sender: Any) {
+        
+        print("choose Hot menu")
+        
+        switch (self.menuName) {
+            
+        case "Iced Americano":
+            self.menuImageView.image = UIImage(named: "americano_hot")
+            self.menuNameLabel.text = "Americano"
+            
+        case "Latte" :
+            self.menuImageView.image = UIImage(named: "latte_hot")
+            self.menuNameLabel.text = "Latte"
+            
+        default :
+            print("default")
+        }
+    }
+    
+    
+    @IBAction func switchIceMenu(_ sender: Any) {
+        
+        print("choose Ice menu")
+        
+//        self.menuImageView.image = UIImage(named: "americano_ice")
+        
+        switch (self.menuName) {
+            
+        case "Iced Americano":
+            self.menuImageView.image = UIImage(named: "americano_ice")
+            self.menuNameLabel.text = "Iced Americano"
+            
+        case "Latte" :
+            self.menuImageView.image = UIImage(named: "latte_ice")
+            self.menuNameLabel.text = "Iced Latte"
+        default :
+            print("default")
+        }
+        
+    }
+
 
     // view
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menuCountStepper.wraps = true
         menuCountStepper.autorepeat = true
+        menuCountStepper.minimumValue = 1
         menuCountStepper.maximumValue = 30
         
+        self.menuOrderPrice.text? = String(menuPrice) + " 원"
+            
         
             }
     
     // 이전 VC 에서 받아 appear 할 property
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        menuNameTag.text = menuName
+        menuNameLabel.text = menuName
         menuImageView.image = menuImage
         
     }
     
+
 }
-
-
-
-// 메뉴에 맞게 가격 자동 수정
-// 메뉴에 맞게 옵션 자동 array
-// 주문 확인 및 수정(추가 or 삭제) VC
-// 최종 주문
