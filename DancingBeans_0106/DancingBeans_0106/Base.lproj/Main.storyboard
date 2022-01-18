@@ -36,7 +36,7 @@
                                     <fontDescription key="titleFontDescription" name="BeckmanFree" family="Beckman" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="dei-WV-Nhu" kind="show" id="3nV-Su-l7W"/>
+                                    <segue destination="dei-WV-Nhu" kind="show" id="Tpq-Vb-OhP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+            <point key="canvasLocation" x="804" y="125"/>
         </scene>
         <!--Order View Controller-->
         <scene sceneID="lOG-V6-ZYj">
@@ -204,6 +204,25 @@
                                     <segue destination="hrU-75-77g" kind="presentation" id="jXW-QS-Nic"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-Vz-K8Y">
+                                <rect key="frame" x="20" y="729" width="267" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.25095507500000003" green="0.25099658969999999" blue="0.25094601509999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Pay">
+                                    <color key="baseBackgroundColor" red="0.7215074897" green="0.70984405279999996" blue="0.69011288879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="unz-tD-pHR" kind="show" id="IJT-yO-wY3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8U-pm-D0h">
+                                <rect key="frame" x="310" y="729" width="49" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.27448350189999998" green="0.27060544489999999" blue="0.27055168149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="gobackward" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oK2-JZ-VVo"/>
                         <color key="backgroundColor" red="0.99207526450000005" green="0.97260278460000005" blue="0.94106537099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DG8-dN-3Ch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.39999999999998" y="124.8768472906404"/>
+            <point key="canvasLocation" x="1721" y="125"/>
         </scene>
         <!--Option View Controller-->
         <scene sceneID="6An-KZ-jD6">
@@ -261,7 +280,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84k-kw-SQq">
                                 <rect key="frame" x="20" y="456" width="193" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
                                 <color key="textColor" red="0.50932851459999995" green="0.50932851459999995" blue="0.50932851459999995" alpha="0.61000959440000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -370,13 +389,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="156-Ws-3ZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="123.39901477832512"/>
+            <point key="canvasLocation" x="2570.4000000000001" y="123.39901477832512"/>
+        </scene>
+        <!--Pay View Contoller-->
+        <scene sceneID="cg0-jH-dqh">
+            <objects>
+                <viewController id="unz-tD-pHR" customClass="PayViewContoller" customModule="DancingBeans_0106" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWt-zH-M0m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hUT-i8-3MR"/>
+                        <color key="backgroundColor" red="0.99207526450000005" green="0.97260278460000005" blue="0.94106537099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Jm-SG-0ff"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4s-sw-R8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="875.61576354679812"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jXW-QS-Nic"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="gobackward" catalog="system" width="121" height="128"/>
         <image name="main" width="1080" height="2340"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -7,13 +7,20 @@
 
 import UIKit
 
+struct OrderData{
+    
+    let IceHot: String
+    let Shot: String
+    let Count: Int
+}
+
+
 class OptionViewController: UIViewController{
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     // IBOutlet
     @IBOutlet weak var menuImageTag: UIImageView!
@@ -95,10 +102,14 @@ class OptionViewController: UIViewController{
     }
     
     // 선택한 음료담는 버튼 -> 메인화면으로 이동
+    // Data Store
     @IBAction func optionPageDone(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(iceHotTouchButtons(_:), forKey: OrderData.)
+        UserDefaults.standard.set(shotTouchButtons(_:), forKey: OrderData.)
+        UserDefaults.standard.set(menuValueLabel, forKey: OrderData.State.Count.rawValue)
         
         self.dismiss(animated: true, completion: nil)
     }
     
 }
-
