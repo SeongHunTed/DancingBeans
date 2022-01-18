@@ -23,9 +23,11 @@ class PaymentVC: UIViewController {
         
         if let first = ud.string(forKey: "menuPrice") {
             orderedMenuPrice.text = first
-        } else if let confirmMenuName = ud.string(forKey: "menuName") {
-            orderedMenuName.text = confirmMenuName
         }
+        
+        let confirmMenuName = ud.string(forKey: "menuName")
+        orderedMenuName.text = confirmMenuName
+        
         
         
         
