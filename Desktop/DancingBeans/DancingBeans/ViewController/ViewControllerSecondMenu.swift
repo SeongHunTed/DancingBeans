@@ -5,7 +5,26 @@ import UIKit
 
 class ViewControllerSecondMenu: UIViewController {
 
-
+    // struct
+//    struct MenuOption {
+//
+//        let ictHot: String?
+//        let shot: String?
+//        let count: String?
+//
+//    }
+    
+    
+    class MenuOption {
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     // var
 
     var menuName: String?   // --- 이전 VC에서 정의할 메뉴 이름
@@ -31,6 +50,7 @@ class ViewControllerSecondMenu: UIViewController {
         present(navigationController, animated: true, completion: nil)
     }
     
+    let ud = UserDefaults.standard
     // 메뉴 개수 및 가격 count func
     @IBAction func menuCountNumberStepper(_ sender: UIStepper) {
         
@@ -44,22 +64,13 @@ class ViewControllerSecondMenu: UIViewController {
         menuOrderPrice.text = " \(price!) 원"
         
         // UserDefaults 인스턴스 생성
-        let ud = UserDefaults.standard
+
         // 값 저장
-        ud.set(self.menuOrderPrice.text, forKey: "menuPrice")
-        ud.set(self.menuNameLabel.text, forKey: "menuName")
+        
         
     }
 
-    
-    // 담기 버튼 action
-    @IBAction func backToMain() {
-//        self.dismiss(animated: true, completion: nil) // --- modal.dismiss
-        print("담기 클릭")
-        self.navigationController?.popViewController(animated: true) // --- navigation pop
-        
-    }
-    
+     
     @IBAction func switchHotMenu(_ sender: Any) {
         
         print("choose Hot menu")
@@ -67,14 +78,17 @@ class ViewControllerSecondMenu: UIViewController {
         switch (self.menuName) {
             
         case "Iced Americano":
+            
             self.menuImageView.image = UIImage(named: "americano_hot")
             self.menuNameLabel.text = "Americano"
             
         case "Latte" :
+            
             self.menuImageView.image = UIImage(named: "latte_hot")
             self.menuNameLabel.text = "Latte"
             
         default :
+            
             print("default")
         }
     }
@@ -89,15 +103,34 @@ class ViewControllerSecondMenu: UIViewController {
         switch (self.menuName) {
             
         case "Iced Americano":
+            
             self.menuImageView.image = UIImage(named: "americano_ice")
             self.menuNameLabel.text = "Iced Americano"
-            
+          
         case "Latte" :
+            
             self.menuImageView.image = UIImage(named: "latte_ice")
             self.menuNameLabel.text = "Iced Latte"
+            
         default :
+            
             print("default")
         }
+        
+    }
+    
+    
+    // 담기 버튼 action
+    @IBAction func backToMain() {
+//        self.dismiss(animated: true, completion: nil) // --- modal.dismiss
+        print("담기 클릭")
+        
+        self.ud.set(self.menuOrderPrice.text, forKey: "menuPrice")
+        self.ud.set(self.menuNameLabel.text, forKey: "menuName")
+
+        
+        
+        self.navigationController?.popViewController(animated: true) // --- navigation pop
         
     }
 
@@ -113,7 +146,6 @@ class ViewControllerSecondMenu: UIViewController {
         
         self.menuOrderPrice.text? = " \(menuPrice)  원"
             
-        
             }
     
     // 이전 VC 에서 받아 appear 할 property
