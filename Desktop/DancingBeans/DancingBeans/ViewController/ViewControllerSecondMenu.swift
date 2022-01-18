@@ -25,32 +25,11 @@ class ViewControllerSecondMenu: UIViewController {
     @IBOutlet weak var menuOptionIce: UIButton!
     
     @IBAction func menuAddOption(_ sender: Any) {
-//
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewControllerOrderOption") as! ViewControllerOrderOption
-//
-//        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
-//
-//        present(bottomSheet, animated: true, completion: nil)
-        
-        
-//        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "ViewController") else {
-//            return
-//        }
-//
-//        nextVC.view.backgroundColor = [.systemPurple, .green, .blue].randomElement()!
-//
-//        if let sheet = nextVC.presentationController as? UISheetPresentationController {
-//            sheet.detents = [.medium(), .large()]
-//        }
-//
-//        present(nextVC, animated: true)
-        
-        
+
         let navigationController = UINavigationController(rootViewController: ViewControllerOrderOption())
         print("dose work" )
         present(navigationController, animated: true, completion: nil)
     }
-    
     
     // 메뉴 개수 및 가격 count func
     @IBAction func menuCountNumberStepper(_ sender: UIStepper) {
@@ -64,7 +43,12 @@ class ViewControllerSecondMenu: UIViewController {
         menuCountNumberLabel.text = Int(sender.value).description
         menuOrderPrice.text = " \(price!) 원"
         
-
+        // UserDefaults 인스턴스 생성
+        let ud = UserDefaults.standard
+        // 값 저장
+        ud.set(self.menuOrderPrice.text, forKey: "menuPrice")
+        ud.set(self.menuNameLabel.text, forKey: "menuName")
+        
     }
 
     
@@ -127,7 +111,7 @@ class ViewControllerSecondMenu: UIViewController {
         menuCountStepper.minimumValue = 1
         menuCountStepper.maximumValue = 30
         
-        self.menuOrderPrice.text? = String(menuPrice) + " 원"
+        self.menuOrderPrice.text? = " \(menuPrice)  원"
             
         
             }
