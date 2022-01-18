@@ -27,6 +27,14 @@ class OrderViewController: UIViewController{
         super.viewDidLoad()
     }
     
+    
+    @IBAction func resetOrderList(_ sender: UIButton) {
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+                    UserDefaults.standard.removeObject(forKey: key.description)
+                }
+    }
+    
+    
 //    func returnBtnText(sender: UIButton)->String
 //    {
 //        return (sender.titleLabel?.text)!

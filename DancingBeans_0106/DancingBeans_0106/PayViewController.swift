@@ -13,6 +13,15 @@ class PayViewContoller: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBOutlet weak var menuNamePay: UILabel!
+    @IBOutlet weak var menuCountPay: UILabel!
+    @IBOutlet weak var menuPricePay: UILabel!
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        let ud = UserDefaults.standard
+        
+        menuNamePay.text = ud.string(forKey: "Menu")
+        menuCountPay.text = ud.string(forKey: "Count")
+        menuPricePay.text = ud.string(forKey: "Price")
+    }
 }

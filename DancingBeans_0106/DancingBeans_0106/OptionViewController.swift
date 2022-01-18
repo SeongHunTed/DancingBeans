@@ -70,15 +70,15 @@ class OptionViewController: UIViewController{
                     iceHotButtons[index].isSelected = false
                 }
                 sender.isSelected = true
-                indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
-                
+                indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender) // 아이스?
             } else {
                 sender.isSelected = false
                 indexOfOneAndOnly = nil
             }
         } else {
             sender.isSelected = true
-            indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender)
+            indexOfOneAndOnly = iceHotButtons.firstIndex(of: sender) // Hot
+
         }
     }
     
@@ -106,11 +106,15 @@ class OptionViewController: UIViewController{
     @IBAction func optionPageDone(_ sender: UIButton) {
         
         let ud = UserDefaults.standard
-//        ud.set(iceHotTouchButtons(_:), forKey: "IceHot")
-//        ud.set(shotTouchButtons(_:), forKey: "Shot")
-        ud.set(menuValueLabel, forKey: "Count")
+        ud.set(self.menuNameTag.text, forKey: "Menu")
+        ud.set(self.menuOrderPrice.text, forKey: "Price")
+        ud.set(self.iceHotButtons[indexOfOneAndOnly!].titleLabel?.text, forKey: "IceHot")
+        ud.set(self.shotButtons[indexOfOneAndOnly2!].titleLabel?.text, forKey: "Shot")
+        ud.set(self.menuValueLabel.text, forKey: "Count")
         
         self.dismiss(animated: true, completion: nil)
+        
+        print(UserDefaults.standard.dictionaryRepresentation())
     }
     
 }
