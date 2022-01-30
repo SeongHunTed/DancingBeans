@@ -36,14 +36,15 @@ class SelectOptionViewController: UIViewController, MenuCartDelegate {
         
         print("MenuCartVC.cartMenuPrice : \(MenuCartVC.cartMenuPrice)")
         
-        print("before addCount : \(addCount)")
+        print("before Global Count Int Test : \(Value.sharedInstance().globalCountInt)")
         
-        addCount += 1
+        Value.sharedInstance().globalCountInt += 1
         
-        print("after addCount : \(addCount)")
+        print("after Global Count Int Test : \(Value.sharedInstance().globalCountInt)")
         
         
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil) // -> modal 이었을때
+//        self.navigationController?.popViewController(animated: true)
         
     }
     
@@ -59,8 +60,11 @@ class SelectOptionViewController: UIViewController, MenuCartDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        optionMenuNameLabel.text = productName
-        optionMenuPriceLabel.text = productPrice
+        self.optionMenuNameLabel.text = self.productName
+        self.optionMenuPriceLabel.text = self.productPrice
+        
+        print("self.productName : \(self.productName)" )
+        
         // Do any additional setup after loading the view.
     }
     
