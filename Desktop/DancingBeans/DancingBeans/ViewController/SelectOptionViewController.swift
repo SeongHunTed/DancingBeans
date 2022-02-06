@@ -1,6 +1,6 @@
 import UIKit
 
-class SelectOptionViewController: UIViewController, PayTableDelegate {
+class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOptionBottomSheetDelegate{
     
     
     var delegate: SelectOptionDelegate?
@@ -40,6 +40,54 @@ class SelectOptionViewController: UIViewController, PayTableDelegate {
     }
     
 
+    // open Select Option Bottom Sheet & setting delegate
+    @IBAction func openSelectOptionBottomSheeet() {
+//        let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
+//
+        
+//        SelectOptionBottomSheetVC.delegate = self //SelectOPtionBottomSheetVC의 권한 대신함
+//        SelectOptionBottomSheetVC.menuName = productName
+        
+//        let viewControllerToPresent = SelectOptionBottomSheetViewController()
+            
+        
+        let viewControllerToPresent = SheetViewController()
+        if let sheet = viewControllerToPresent.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersGrabberVisible = true
+        }
+        present(viewControllerToPresent, animated: true, completion: nil)
+    }
+
+    
+    final class SheetViewController: UIViewController {
+        
+        override func viewDidLoad() {
+//            view.backgroundColor = .systemFill
+            view.backgroundColor = UIColor(white: 1, alpha: 1)
+                
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+            label.center = CGPoint(x: 180, y: 50)
+            label.textAlignment = .center
+            label.text = "productName"
+            
+            let image = UIImage(named: "Americano")
+            let imageView: UIImageView = UIImageView()
+            
+            imageView.contentMode = UIView.ContentMode.scaleAspectFit
+            imageView.center = CGPoint(x: 150, y: 120)
+            imageView.frame.size.width = 200
+            imageView.frame.size.height = 200
+            imageView.center = self.view.center
+            imageView.image = image
+            
+            view.addSubview(label)
+            view.addSubview(imageView)
+            
+        }
+    }
+    
+    
     func alarmCartIsFilled(itemCount: Int) {
         let alertVC = UIAlertController(title: "장바구니 확인", message: "장바구니에 \(Value.sharedInstance().globalCountInt)개의 상품이 추가되었습니다.", preferredStyle: .alert)
         
@@ -54,7 +102,7 @@ class SelectOptionViewController: UIViewController, PayTableDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         optionMenuNameLabel.text = productName
-        optionMenuPriceLabel.text = String(productPrice)
+        optionMenuPriceLabel.text = ("\(productPrice) 원")
         
         menuCountNumberLabel.text = "1"
         menuCountPriceLabel.text = ("\(productPrice) 원")
