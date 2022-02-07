@@ -42,21 +42,20 @@ class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOpti
 
     // open Select Option Bottom Sheet & setting delegate
     @IBAction func openSelectOptionBottomSheeet() {
-//        let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
-//
         
-//        SelectOptionBottomSheetVC.delegate = self //SelectOPtionBottomSheetVC의 권한 대신함
-//        SelectOptionBottomSheetVC.menuName = productName
+        let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
         
-//        let viewControllerToPresent = SelectOptionBottomSheetViewController()
-            
+        SelectOptionBottomSheetVC.delegate = self
+        SelectOptionBottomSheetVC.menuName = productName
         
-        let viewControllerToPresent = SheetViewController()
-        if let sheet = viewControllerToPresent.sheetPresentationController {
+        if let sheet = SelectOptionBottomSheetVC.sheetPresentationController {
             sheet.detents = [.medium()]
-            sheet.prefersGrabberVisible = true
+//            sheet.prefersGrabberVisible = true
+//            sheet.selectedDetentIdentifier = .medium
+//            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = true
         }
-        present(viewControllerToPresent, animated: true, completion: nil)
+        present(SelectOptionBottomSheetVC, animated: true, completion: nil)
     }
 
     
@@ -83,7 +82,6 @@ class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOpti
             
             view.addSubview(label)
             view.addSubview(imageView)
-            
         }
     }
     
