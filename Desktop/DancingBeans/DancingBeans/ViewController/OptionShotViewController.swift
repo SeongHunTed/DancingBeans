@@ -24,19 +24,22 @@ class OptionShotViewController: UIViewController, SelectOptionBottomSheetDelegat
     }
     
     
-    func adjustOption() {
+    func adjustOption() {   
         let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
-
         SelectOptionBottomSheetVC.delegate = self
-        
-        
+        SelectOptionBottomSheetVC.shotCountLabel = UILabel()
+
+
         if let test = SelectOptionBottomSheetVC.shotCountLabel {
-            SelectOptionBottomSheetVC.shotCountLabel.text = esspressoShotCountLabel.text!
+            print(SelectOptionBottomSheetVC.shotCountLabel.text)
+//            SelectOptionBottomSheetVC.shotCountLabel.text = esspressoShotCountLabel.text!
+            SelectOptionBottomSheetVC.shotCountLabel.text = "tetetssttt"
+            print("드러온나")
         } else {
             print("nono")
         }
-//            SelectOptionBottomSheetVC.shotCountLabel.text = esspressoShotCountLabel.text!
         
+//            SelectOptionBottomSheetVC.shotCountLabel.text = esspressoShotCountLabel.text!
         self.dismiss(animated: true, completion: nil)
         
     }
@@ -46,29 +49,11 @@ class OptionShotViewController: UIViewController, SelectOptionBottomSheetDelegat
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//
-//        let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
-//
-//        SelectOptionBottomSheetVC.delegate = self
-//
-//        SelectOptionBottomSheetVC.menuShotCount = esspressoShotCountLabel.text!
-//        print("disappear?")
-//    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
