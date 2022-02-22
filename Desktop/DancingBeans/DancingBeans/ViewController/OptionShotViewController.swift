@@ -26,15 +26,8 @@ class OptionShotViewController: UIViewController, SelectOptionBottomSheetDelegat
     func testAction() {
         let ad = UIApplication.shared.delegate as? AppDelegate
 
-//        if let first = ad?.shotCountTest {
-//            self.esspressoShotCountLabel.text = first
-//        } else {
-//            print(" nil 임")
-//        }
-//
         ad?.shotCountTest = self.esspressoShotCountLabel?.text!
-        
-        
+       
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
@@ -54,23 +47,20 @@ class OptionShotViewController: UIViewController, SelectOptionBottomSheetDelegat
 //        } else {
 //            print(" viewDidLoad 될 때 nil 임")
 //        }
-        
-        
-        let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
 
-        switch (SelectOptionBottomSheetVC.menuNameLabel?.text) {
-            
-        case "Americano" :
-            print("americano 네")
-        default:
-            print("default")
-        }
-
-        
-        
-        
+//        let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
+//
+//        print("여기서. ; \(SelectOptionBottomSheetVC.menuName)")
+//        print("여긴 : \(SelectOptionBottomSheetVC.menuNameLabel?.text)")
+//
+//
+//        switch (SelectOptionBottomSheetVC.menuNameLabel?.text) {
+//
+//        case "Americano" :
+//            print("americano 네")
+//        default:
+//            print(SelectOptionBottomSheetVC.menuName)
+//            print("default")
+//        }
     }
-
-    
-
 }

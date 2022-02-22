@@ -2,6 +2,10 @@ import UIKit
 
 class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOptionBottomSheetDelegate{
     
+    func adjustOption() {
+    }
+    
+    
     
     var delegate: SelectOptionDelegate?
     var productName: String = ""
@@ -22,7 +26,6 @@ class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOpti
         Value.sharedInstance().globalOrderMenuList.append(self.productName)
         // addMenuCartButtonTapped 시 Value file 의 0 으로 정의된 정수타입 globalCountInt 가 +1 된다
         Value.sharedInstance().globalCountInt += 1
-     
         // "선택한 음료 담기" 클릭 시 alert 뜸
         alarmCartIsFilled(itemCount: Value.sharedInstance().globalCountInt)
     }
@@ -42,7 +45,6 @@ class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOpti
 
     // open Select Option Bottom Sheet & setting delegate
     @IBAction func openSelectOptionBottomSheeet() {
-        
         let SelectOptionBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "SelectOptionBottomSheetViewController") as! SelectOptionBottomSheetViewController
         
         SelectOptionBottomSheetVC.delegate = self
@@ -50,39 +52,9 @@ class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOpti
         
         if let sheet = SelectOptionBottomSheetVC.sheetPresentationController {
             sheet.detents = [.medium()]
-//            sheet.prefersGrabberVisible = true
-//            sheet.selectedDetentIdentifier = .medium
-//            sheet.largestUndimmedDetentIdentifier = .medium
             sheet.prefersScrollingExpandsWhenScrolledToEdge = true
         }
         present(SelectOptionBottomSheetVC, animated: true, completion: nil)
-    }
-
-    
-    final class SheetViewController: UIViewController {
-        
-        override func viewDidLoad() {
-//            view.backgroundColor = .systemFill
-            view.backgroundColor = UIColor(white: 1, alpha: 1)
-                
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-            label.center = CGPoint(x: 180, y: 50)
-            label.textAlignment = .center
-            label.text = "productName"
-            
-            let image = UIImage(named: "Americano")
-            let imageView: UIImageView = UIImageView()
-            
-            imageView.contentMode = UIView.ContentMode.scaleAspectFit
-            imageView.center = CGPoint(x: 150, y: 120)
-            imageView.frame.size.width = 200
-            imageView.frame.size.height = 200
-            imageView.center = self.view.center
-            imageView.image = image
-            
-            view.addSubview(label)
-            view.addSubview(imageView)
-        }
     }
     
     
@@ -91,6 +63,7 @@ class SelectOptionViewController: UIViewController, PayTableDelegate, SelectOpti
         
         // Parameter {handler} : 사용자가 action 을 취했을 때 일어나는 action
         let okAction = UIAlertAction(title: "확인", style: .default, handler: { (action) in self.dismiss(animated: true, completion: nil)})
+        
         alertVC.addAction(okAction)
         
         present(alertVC, animated: true, completion: nil)
